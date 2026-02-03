@@ -4,15 +4,19 @@
   <meta charset="UTF-8" />
   <title>Content Editor</title>
   <link href="./config.yml" type="text/yaml" rel="cms-config-url" />
-  <script src="https://cdn.jsdelivr.net/npm/@staticcms/app@latest/dist/static-cms.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/@staticcms/app@latest/dist/static-cms.css" rel="stylesheet" />
+  <script>
+  window.CMS_MANUAL_INIT = true;
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@staticcms/app@latest/dist/static-cms.js"></script>
+
+<script>
+  window.addEventListener("load", () => {
+    CMS.init({ config: window.staticCMSConfig });
+  });
+</script>
 </head>
 <body>
-  <script>
-    window.CMS_MANUAL_INIT = true;
-  </script>
-  <script>
-    CMS.init({ config: window.staticCMSConfig });
-  </script>
 </body>
 </html>

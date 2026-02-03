@@ -3,29 +3,27 @@ backend:
   repo: itsupport-web/testing
   branch: main
 
-# Where uploaded images go (in your repo)
 media_folder: "public/images"
 public_folder: "/images"
 
-# Optional but recommended
 publish_mode: editorial_workflow
 
 collections:
-  - name: posts
-    label: Posts
-    folder: content/posts
+  - name: "posts"
+    label: "Posts"
+    folder: "content/posts"
     create: true
     fields:
-      - label: Title
-        name: title
-        widget: string
-      - label: Object
-        name: object
-        widget: object
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Object"
+        name: "object"
+        widget: "object"
         fields:
-          - label: Title
-            name: title
-            widget: string
-      - label: body
-        name: body
-        widget: markdown
+          - label: "Title"
+            name: "title"
+            widget: "string"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"

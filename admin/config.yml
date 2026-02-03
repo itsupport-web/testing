@@ -11,11 +11,21 @@ public_folder: "/images"
 publish_mode: editorial_workflow
 
 collections:
- - name: "pages"
-   label: "pages"
-   folder: "content/pages"
-   create: true
-   slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-   fields:
-     - { label: "Title", name: "title", widget: "string" }
-     - { label: "Body", name: "body", widget: "markdown" }}
+  - name: posts
+    label: Posts
+    folder: content/posts
+    create: true
+    fields:
+      - label: Title
+        name: title
+        widget: string
+      - label: Object
+        name: object
+        widget: object
+        fields:
+          - label: Title
+            name: title
+            widget: string
+      - label: body
+        name: body
+        widget: markdown

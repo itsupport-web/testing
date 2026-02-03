@@ -15,9 +15,16 @@
   <!-- Load the Static CMS JavaScript -->
    <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-  <script>
-
- 
+ <script>
+    // Wait until CMS script has loaded
+    window.addEventListener("DOMContentLoaded", function() {
+      if (window.CMS) {
+        CMS.init();
+      } else {
+        console.error("Decap CMS failed to load.");
+      }
+    });
+  </script>
 
 </body>
 </html>

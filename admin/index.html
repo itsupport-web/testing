@@ -1,3 +1,17 @@
+<!DOCTYPE html>
 <html>
-  <p>this is testing site yay C:</p>
+<head>
+  <meta charset="UTF-8" />
+  <title>Content Editor</title>
+  <script src="https://cdn.jsdelivr.net/npm/@staticcms/app@latest/dist/static-cms.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/@staticcms/app@latest/dist/static-cms.css" rel="stylesheet" />
+</head>
+<body>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+  <script>
+    CMS.init({ config: window.staticCMSConfig });
+  </script>
+</body>
 </html>

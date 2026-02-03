@@ -2,21 +2,36 @@
 <html>
 <head>
   <meta charset="UTF-8" />
-  <title>Content Editor</title>
-  <link href="./config.yml" type="text/yaml" rel="cms-config-url" />
-  <link href="https://cdn.jsdelivr.net/npm/@staticcms/app@latest/dist/static-cms.css" rel="stylesheet" />
-  <script>
-  window.CMS_MANUAL_INIT = true;
-</script>
+  <title>Static CMS Editor</title>
 
-<script src="https://cdn.jsdelivr.net/npm/@staticcms/app@latest/dist/static-cms.js"></script>
+  <!-- Tell the CMS where its config file is -->
+  <link rel="cms-config-url" href="./config.yml" type="text/yaml" />
 
-<script>
-  window.addEventListener("load", () => {
-    CMS.init({ config: window.staticCMSConfig });
-  });
-</script>
+  <!-- CMS styles -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/@staticcms/app@latest/dist/static-cms.css"
+    rel="stylesheet"
+  />
 </head>
 <body>
+
+  <!-- Load the Static CMS JavaScript -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/@staticcms/app@latest/dist/static-cms.js"
+  ></script>
+
+  <script>
+    // Wait until CMS script has loaded
+    window.addEventListener("DOMContentLoaded", () => {
+      if (typeof CMS !== "undefined") {
+        CMS.init({
+          config: window.staticCMSConfig
+        });
+      } else {
+        console.error("Static CMS failed to load.");
+      }
+    });
+  </script>
+
 </body>
 </html>

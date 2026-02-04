@@ -1,1 +1,9 @@
+# Redirect root index.html to /home
+/index.html  /home  301
+
+# Redirect any other .html URLs to clean URLs
+/*.html  /:splat  301
+
+# Rewrite clean URLs to actual HTML files
+/:splat  /:splat.html  200
 

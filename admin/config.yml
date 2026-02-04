@@ -1,28 +1,14 @@
 backend:
-  name: git-gateway
-  repo: itsupport-web/testing
+  name: github
+  repo: user/repo
 
-media_folder: "public/images"
-public_folder: "/images"
-
-publish_mode: editorial_workflow
+media_folder: /static/media
+public_folder: /media
 
 collections:
-  - name: "posts"
-    label: "Posts"
-    folder: "content/posts"
-    create: true
+  - name: posts
+    label: Posts
+    folder: /content/posts
     fields:
-      - label: "Title"
-        name: "title"
-        widget: "string"
-      - label: "Object"
-        name: "object"
-        widget: "object"
-        fields:
-          - label: "Title"
-            name: "title"
-            widget: "string"
-      - label: "Body"
-        name: "body"
-        widget: "markdown"
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }

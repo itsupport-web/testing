@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: user/repo
+  repo: itsupport-web/testing
 
 media_folder: /static/media
 public_folder: /media

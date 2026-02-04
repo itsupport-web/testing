@@ -1,19 +1,12 @@
-<body>
-
-  <!-- CMS mount point -->
-  <div id="nc-root"></div>
-
-  <!-- Load the CMS JavaScript -->
-  <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
-
-  <script>
-    window.addEventListener("DOMContentLoaded", function () {
-      if (window.CMS) {
-        CMS.init();
-      } else {
-        console.error("Decap CMS failed to load.");
-      }
-    });
-  </script>
-
-</body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Content Manager</title>
+  </head>
+  <body>
+    <!-- Include the script that builds the page and powers Decap CMS -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  </body>
+</html>

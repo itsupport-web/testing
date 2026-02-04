@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8" />
-  <title>Static CMS Editor</title>
-
-  <!-- Tell the CMS where its config file is -->
-  <link rel="cms-config-url" href="./admin/config.yml" type="text/yaml" />
-
-  <!-- CMS styles -->
-   <link href="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.css" rel="stylesheet" />
-</head>
 <body>
 
-  <!-- Load the Static CMS JavaScript -->
-   <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <!-- CMS mount point -->
+  <div id="nc-root"></div>
 
- <script>
-    // Wait until CMS script has loaded
-    window.addEventListener("DOMContentLoaded", function() {
+  <!-- Load the CMS JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
       if (window.CMS) {
         CMS.init();
       } else {
@@ -27,4 +17,3 @@
   </script>
 
 </body>
-</html>

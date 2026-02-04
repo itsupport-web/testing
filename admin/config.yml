@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: git-gateway
   repo: itsupport-web/testing
 
 media_folder: "public/images"
